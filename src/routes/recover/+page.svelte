@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Reset from "../../components/auth/reset.svelte";
+    import Reset from "$lib/components/auth/reset.svelte";
 </script>
 
 <Reset />

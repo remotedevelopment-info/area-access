@@ -1,7 +1,7 @@
 
 <script lang="ts">
   import { page } from '$app/stores';
-	import Signup from '../../../components/auth/signup.svelte';
+    import Signup from '$lib/components/auth/signup.svelte';
 
   let area = $page.params.area
 </script>
