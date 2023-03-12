@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import Signup from '../../../components/auth/signup.svelte';
+	import Login from '../../../components/auth/login.svelte';
 
 	let area = $page.params.area;
 
@@ -9,4 +9,4 @@
 	}
 </script>
 
-<Signup {area} on:submit={handleSubmit} />
+<Login {area} on:login={handleSubmit} />

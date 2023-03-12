@@ -3,37 +3,43 @@
 	const dispatch = createEventDispatcher();
 
 	import './auth.css';
-	export let area = ''
+	export let area = '';
 
 	let isSuccessVisible = false;
 	let submitted = false;
-	let email  = ''
+	let email = '';
 
 	function handleSubmit() {
 		isSuccessVisible = true;
-		dispatch('reset', {
+		dispatch('login', {
 			email: email
 		});
-		setTimeout(function(){
+		setTimeout(function () {
 			isSuccessVisible = false;
 		}, 4000);
 	}
 </script>
 
 <div class="page">
-	<form autocomplete="off" class="form"  id="reset-form" class:submitted on:submit|preventDefault={handleSubmit}>
+	<form
+		autocomplete="off"
+		class="form"
+		id="login-form"
+		class:submitted
+		on:submit|preventDefault={handleSubmit}
+	>
 		<div class="control">
 			{#if area === ''}
-				<h1>Cant Access?</h1>
+				<h1>Wanna Access?</h1>
 			{:else}
-				<h1>Cant Access <b>{area}</b> ?</h1>
+				<h1>Wanna Access <b>{area}</b> ?</h1>
 			{/if}
 		</div>
 		<div class="control">
-			<p>Please enter your email to recover</p>
+			<p>Please enter your email to login</p>
 		</div>
 		<div class="control block-cube block-input">
-			<input name="email" placeholder="Email address" type="email" required  bind:value={email}/>
+			<input name="email" placeholder="Email address" type="email" required bind:value={email} />
 			<div class="bg-top">
 				<div class="bg-inner" />
 			</div>
@@ -56,5 +62,12 @@
 			</div>
 			<div class="text">Send Link</div>
 		</button>
+		<div class="signup-link">
+			{#if area === ''}
+				<a href="/register">New?</a>
+			{:else}
+				<a href={`/${area}/register`}>New to {area}?</a>
+			{/if}
+		</div>
 	</form>
 </div>

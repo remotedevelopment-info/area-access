@@ -134,3 +134,12 @@
 	.block-cube.block-cube-hover:hover .bg .bg-inner {
 		top: 100%;
 	}
+
+	.signup-link{
+		margin-top: 2vh;
+		text-align: right;
+	}
+
+	.signup-link a {
+		color: white;
+	}

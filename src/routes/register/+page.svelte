@@ -1,7 +1,7 @@
-<script lang="ts">
+<script>
 	import Signup from '../../components/auth/signup.svelte';
 
-	function handleSubmit(event: any) {
+	function handleSubmit(event) {
 		console.log(event.detail);
 	}
 </script>
