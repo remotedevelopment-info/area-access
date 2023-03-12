@@ -6,6 +6,11 @@
 
 	function handleSubmit(event) {
 		console.log(event.detail);
+		//data to sent to API
+		// {
+		// 	email: event.detail.email
+		// 	area: area
+		// }
 	}
 </script>
 
