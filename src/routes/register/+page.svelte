@@ -1,5 +1,9 @@
 <script lang="ts">
-    import Signup from "../../components/auth/signup.svelte";
+	import Signup from '../../components/auth/signup.svelte';
+
+	function handleSubmit(event: any) {
+		console.log(event.detail);
+	}
 </script>
 
-<Signup />
+<Signup area="" on:submit={handleSubmit} />
